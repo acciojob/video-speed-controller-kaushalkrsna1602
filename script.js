@@ -49,3 +49,11 @@ function handleRangeUpdate(event) {
   let element = event.target;
   video[element.name] = element.value;
 }
+
+const rewindButton = player.querySelector(".rewind");
+
+rewindButton.addEventListener("click", rewindVideo);
+
+function rewindVideo() {
+  video.currentTime = 0; // Rewind to the beginning
+}
